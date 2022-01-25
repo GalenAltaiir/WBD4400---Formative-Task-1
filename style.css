@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background: #123;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+main {
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .btn {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 150px;
+  margin: 15px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  background: whitesmoke;
+}
+
+main .anim1 {
+  background: yellowgreen;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .anim1:hover {
+  border-radius: 25px;
+  color: green;
+  background: white;
+  -webkit-transform: scaleX(1.5) scaleY(2);
+          transform: scaleX(1.5) scaleY(2);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .anim1:focus {
+  -webkit-animation: scaleAndBg .5s;
+          animation: scaleAndBg .5s;
+}
+
+@-webkit-keyframes scaleAndBg {
+  0% {
+    color: green;
+    background: white;
+    -webkit-transform: scaleX(1.5) scaleY(2);
+            transform: scaleX(1.5) scaleY(2);
+  }
+  50% {
+    color: white;
+    background: red;
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+  100% {
+    color: green;
+    background: white;
+    -webkit-transform: scaleX(1.5) scaleY(2);
+            transform: scaleX(1.5) scaleY(2);
+  }
+}
+
+@keyframes scaleAndBg {
+  0% {
+    color: green;
+    background: white;
+    -webkit-transform: scaleX(1.5) scaleY(2);
+            transform: scaleX(1.5) scaleY(2);
+  }
+  50% {
+    color: white;
+    background: red;
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+  100% {
+    color: green;
+    background: white;
+    -webkit-transform: scaleX(1.5) scaleY(2);
+            transform: scaleX(1.5) scaleY(2);
+  }
+}
+
+main .anim2 {
+  color: white;
+  background: rebeccapurple;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 2px solid rebeccapurple;
+}
+
+main .anim2:hover {
+  width: 500px;
+  background: white;
+  color: black;
+}
+
+main .anim2:active {
+  -webkit-animation: loadUp 3s;
+          animation: loadUp 3s;
+  position: relative;
+}
+
+@-webkit-keyframes loadUp {
+  0% {
+    width: 500px;
+  }
+  50% {
+    width: 120px;
+  }
+  100% {
+    width: 500px;
+  }
+}
+
+@keyframes loadUp {
+  0% {
+    width: 500px;
+  }
+  50% {
+    width: 120px;
+  }
+  100% {
+    width: 500px;
+  }
+}
+
+main img {
+  margin: 5px;
+  width: 200px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main .img1 {
+  color: white;
+  background: rebeccapurple;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 2px solid rebeccapurple;
+}
+
+main .img1:hover {
+  opacity: .3;
+  -webkit-transition: all .3;
+  transition: all .3;
+  -webkit-transform: rotate(180deg) scale(2);
+          transform: rotate(180deg) scale(2);
+}
+
+main .img2 {
+  color: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 2px solid red;
+}
+
+main .img2:hover {
+  opacity: .3;
+  -webkit-transition: all .3;
+  transition: all .3;
+  -webkit-transform: translateY(100px) scale(0.5) translateX(200px);
+          transform: translateY(100px) scale(0.5) translateX(200px);
+}
+/*# sourceMappingURL=style.css.map */
