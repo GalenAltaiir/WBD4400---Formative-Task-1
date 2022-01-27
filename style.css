@@ -18,6 +18,177 @@ main {
           justify-content: center;
 }
 
+main nav {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-bottom: 35px;
+}
+
+main nav .nav-btn {
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+main nav #menu1 {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background: white;
+}
+
+main nav #menu1:hover {
+  background: violet;
+  -webkit-animation: rainbow 1.5s infinite;
+          animation: rainbow 1.5s infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background: violet;
+    border: 2px solid violet;
+  }
+  25% {
+    background: indigo;
+    border: 2px solid indigo;
+    color: white;
+  }
+  50% {
+    background: blue;
+    border: 2px solid blue;
+  }
+  75% {
+    background: green;
+    border: 2px solid green;
+  }
+  100% {
+    background: yellow;
+    border: 2px solid yellow;
+    color: black;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background: violet;
+    border: 2px solid violet;
+  }
+  25% {
+    background: indigo;
+    border: 2px solid indigo;
+    color: white;
+  }
+  50% {
+    background: blue;
+    border: 2px solid blue;
+  }
+  75% {
+    background: green;
+    border: 2px solid green;
+  }
+  100% {
+    background: yellow;
+    border: 2px solid yellow;
+    color: black;
+  }
+}
+
+main nav #menu2 {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background: white;
+}
+
+main nav #menu2::after {
+  content: "Menu Item 2";
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+main nav #menu2:hover::after {
+  content: "Magic Trick !";
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+main nav #menu2:hover {
+  -webkit-animation: styleChange .35s;
+          animation: styleChange .35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes styleChange {
+  0% {
+    background: white;
+    color: black;
+    border: 2px solid white;
+  }
+  100% {
+    background: none;
+    color: white;
+    border: 2px solid white;
+  }
+}
+
+@keyframes styleChange {
+  0% {
+    background: white;
+    color: black;
+    border: 2px solid white;
+  }
+  100% {
+    background: none;
+    color: white;
+    border: 2px solid white;
+  }
+}
+
+main nav #menu3 {
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  background: white;
+}
+
+main nav #menu3:hover {
+  -webkit-animation: classicMode .35s;
+          animation: classicMode .35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes classicMode {
+  0% {
+    background: white;
+    color: black;
+    border: 2px solid white;
+  }
+  100% {
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    border-bottom: 2px solid red;
+  }
+}
+
+@keyframes classicMode {
+  0% {
+    background: white;
+    color: black;
+    border: 2px solid white;
+  }
+  100% {
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    border-bottom: 2px solid red;
+  }
+}
+
 main .btn {
   -ms-grid-column-align: center;
       justify-self: center;

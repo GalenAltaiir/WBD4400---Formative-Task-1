@@ -15,6 +15,128 @@ main{
     display: grid;
     justify-content: center;
 
+    nav{
+        justify-self: center;
+        margin-bottom: 35px;
+
+        .nav-btn{
+            text-decoration: none;
+            color: black;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        // Menu Item 1 - On hover animation
+        #menu1{
+            transition: all 1s;
+            background: white;
+
+            &:hover{
+                background: violet;
+                animation: rainbow 1.5s infinite;
+
+                        @keyframes rainbow {
+                            0% {
+                                background: violet;
+                                border: 2px solid violet;
+                            }
+
+                            25%{
+                                background: indigo;
+                                border: 2px solid indigo;
+                                color: white;
+                            }
+
+                            50% {
+                                background: blue;
+                                border: 2px solid blue;
+                            }
+
+                            75%{
+                                background: green;
+                                border: 2px solid green;
+                            }
+
+                            100% {
+                                background: yellow;
+                                border: 2px solid yellow;
+                                color: black;
+                            }
+                        }
+            }
+        }
+
+
+        // MENU ITEM 2
+        #menu2 {
+            transition: all 1s;
+            background: white;
+            
+
+            &::after{
+                content: "Menu Item 2";
+                transition: .3s all;
+            }
+
+            &:hover::after{
+                content: "Magic Trick !";
+                transition: .3s all;
+            }
+
+            &:hover {
+                animation: styleChange .35s ;
+                animation-fill-mode: forwards; // this prevents the animation from ending and going back to the start state.
+
+
+                @keyframes styleChange {
+                    0% {
+                        background: white;
+                        color: black;
+                        border: 2px solid white;
+                    }
+
+                    100%{
+                        background: none;
+                        color: white;
+                        border: 2px solid white;
+
+                    }
+                }
+            }
+        }
+
+        #menu3 {
+            transition: all .35s;
+            background: white;
+
+            &:hover {
+                animation: classicMode .35s;
+                animation-fill-mode: forwards; // this prevents the animation from ending and going back to the start state.
+
+
+                @keyframes classicMode {
+                    0% {
+                        background: white;
+                        color: black;
+                        border: 2px solid white;
+                    }
+
+                    100% {
+                        border-radius: 0;
+                        background: black;
+                        color: white;
+                        border: 2px solid black;
+                        border-bottom: 2px solid red;
+                    }
+                }
+            }
+        }
+
+
+    }
+
     .btn {
         justify-self: center;
         width: 150px;
